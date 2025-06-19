@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Task Master</title>
+{% endblock %}
+
+{% block body %}
+<div class="content">
+    <h1 class="" style="text-align: center;">Update</h1>
+
+    <!-- I think this means, when you operate with the form, it redirects you to this url which then gets processed by the decorator -->
+    <form action="/update/{{task.id}}" method="POST">
+        <input type="text" name="content" id="content" value="{{task.content}}">
+        <input class="submit-btn" type="submit" value="Add Task">
+    </form>
+</div>
+{% endblock %}
