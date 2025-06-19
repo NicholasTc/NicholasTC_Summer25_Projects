@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #153677, #4e085f);
+    padding: 1rem;
+}
+
+.todo-app {
+    width: 100%;
+    max-width: 54rem;
+    background: white;
+    margin: 10rem auto 2rem;
+    padding: 4rem 3rem 7rem;
+    border-radius: 1rem; 
+}
+
+.todo-app h2 {
+    color: #002765;
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #edeef0;
+    border-radius: 3rem;
+    padding-left: 2rem;
+}
+
+input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 1rem;
+}
+
+button {
+    border: none;
+    outline: none;
+    padding: 1.6rem 5rem;
+    background: #ff5945;
+    color: white;
+    font-size: 1.6rem;
+    cursor: pointer;
+    border-radius: 4rem;
+}
+
+ul li {
+  position: relative;
+  list-style: none;
+  font-size: 1.7rem;
+  /* smaller, simpler padding on the li itself */
+  padding: 1.2rem 0.8rem;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+ul li::before {
+  content: '';
+  flex-shrink: 0;
+  width: 2.8rem;
+  height: 2.8rem;
+  border-radius: 50%;
+  background-image: url(/assets/unchecked.png);
+  background-size: cover;
+  background-position: center;
+  /* space between the circle and the text */
+  margin-right: 1.4rem; 
+}
+
+/* These below is the 2nd style when the user click to check */
+ul li.checked {
+    color: #555;
+    text-decoration: line-through;
+}   
+
+ul li.checked::before {
+    background-image: url(/assets/checked.png);
+}   
+
+ul li span {
+  position: absolute;
+  right: 1rem;     /* distance from the right edge of the <li> */
+  top: 50%;        /* vertically center */
+  transform: translateY(-50%);
+  width: 4rem;
+  height: 4rem;
+  font-size: 2.2rem;
+  color: #555;
+  line-height: 4rem;
+  text-align: center;
+  background: none;
+  cursor: pointer;
+}
+
+ul li span:hover {
+    background: #edeef0;
+    border-radius: 50%;
+}
+
+
